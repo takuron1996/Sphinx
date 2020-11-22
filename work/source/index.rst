@@ -5,7 +5,7 @@ Pythonを用いたwebスクレイピング入門
 ==========
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
    /article/introduction
    /article/prepare
