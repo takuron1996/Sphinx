@@ -5,7 +5,7 @@ AUTHOR = 'Taku Ikegami'
 LANGUAGE = ja
 VERSION = 1.0.0
 EXTENSIONS = 'sphinxcontrib.seqdiag','recommonmark','sphinx.ext.githubpages'
-THEME = pyramid
+THEME = agogo
 DOCKER_COMMAND = docker run --rm -it -v "$$PWD"$(TARGET):/docs $(IMAGE)
 
 image:
