@@ -71,7 +71,7 @@ webというディレクトリが作成されていれば大丈夫です。
 Python3のインストール
 -------------------------
 
-.. only:: package
+.. only:: python3.8.1のインストール
 
  python3.8.1のインストール :download:`package <./package/python-3.8.1-macosx10.9.pkg>`
  を用意したので今回はこれを用いてpython3をインストールしてください。
