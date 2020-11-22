@@ -4,8 +4,8 @@ PROJECT = practice
 AUTHOR = 'Taku Ikegami'
 LANGUAGE = ja
 VERSION = 1.0.0
-SUFFIX = '.md'
 EXTENSIONS = 'sphinxcontrib.seqdiag','recommonmark','sphinx.ext.githubpages'
+THEME = pyramid
 DOCKER_COMMAND = docker run --rm -it -v "$$PWD"$(TARGET):/docs $(IMAGE)
 
 image:
@@ -16,11 +16,8 @@ rmi:
 
 quickstart:
 	$(DOCKER_COMMAND) sphinx-quickstart \
-	-q -p $(PROJECT) -a $(AUTHOR) -l $(LANGUAGE) -v $(VERSION) --sep --extensions $(EXTENSIONS) \
-	--suffix=$(SUFFIX)
-	mv .$(TARGET)/source/index.md .$(TARGET)/source/index.rst
-	sed -i '' -e "s@source_suffix = '.*'@source_suffix = ['.rst', '.md']@g" .$(TARGET)/source/conf.py
-	sed -i '' -e "s@html_theme = '.*'@html_theme = 'pyramid'@g" .$(TARGET)/source/conf.py
+	-q -p $(PROJECT) -a $(AUTHOR) -l $(LANGUAGE) -v $(VERSION) --sep --extensions $(EXTENSIONS)
+	sed -i '' -e "s@html_theme = '.*'@html_theme = '$(THEME)'@g" .$(TARGET)/source/conf.py
 
 html:
 	$(DOCKER_COMMAND) make html
