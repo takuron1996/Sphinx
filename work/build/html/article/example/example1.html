@@ -62,7 +62,7 @@
 <h2>完成形<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="line-block">
 <div class="line">今回、作成するのはクローリングのコードです。</div>
-<div class="line"><br /></div>
+<div class="line"><a class="reference external" href="https://takuron1996.github.io/Sphinx/index.html">https://takuron1996.github.io/Sphinx/index.html</a> のデータを取得して、HTMLファイルに出力します。</div>
 </div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -78,7 +78,7 @@
 <span class="kn">import</span> <span class="nn">ssl</span>
 <span class="n">ssl</span><span class="o">.</span><span class="n">_create_default_https_context</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">_create_unverified_context</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://docs.python.org/ja/3/contents.html&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://takuron1996.github.io/Sphinx/index.html&#39;</span>
 <span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;result.html&#39;</span>
 
 <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">request</span><span class="p">:</span>
@@ -99,6 +99,21 @@
 <li><p>11行目：応答データをエンコーディングでデコードしてファイルに書き込む</p></li>
 </ul>
 </div>
+<div class="section" id="id5">
+<h2>実行方法<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ python3 example.py
+</pre></div>
+</div>
+<p>実行すると、result.htmlというファイルがexample1ディレクトリの下に作成されます。
+これを開くと取得したHTMLのデータを確認することができます。</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">pwd</span>
+/Users/taku/Desktop/web/example1
+$ ls
+example.py result.html
+$ open result.html
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -117,6 +132,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#id4">完成形</a></li>
+<li><a class="reference internal" href="#id5">実行方法</a></li>
 </ul>
 </li>
 </ul>
