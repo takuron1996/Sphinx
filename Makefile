@@ -1,5 +1,5 @@
 IMAGE = sphinx
-TARGET = /docs
+TARGET = /work
 PROJECT = practice
 AUTHOR = 'Taku Ikegami'
 LANGUAGE = ja
@@ -24,6 +24,9 @@ html:
 
 preview:
 	docker run --rm -it -p 7000:8000 -v "$$PWD"$(TARGET):/docs $(IMAGE) sphinx-autobuild --host=0.0.0.0 --port=8000 source/ build/html
+
+open:
+	cp -r .$(TARGET)/build/html/* docs/
 
 clean:
 	rm -rf .$(TARGET)/*
