@@ -22,7 +22,7 @@ Webページのハイパーリンクを辿って次々にWebページをダウ�
 --------------------
 
 | 今回、作成するのはクローリングのコードです。
-|
+| https://takuron1996.github.io/Sphinx/index.html のデータを取得して、HTMLファイルに出力します。
 
 .. code-block:: python
  :linenos:
@@ -31,7 +31,7 @@ Webページのハイパーリンクを辿って次々にWebページをダウ�
  import ssl
  ssl._create_default_https_context = ssl._create_unverified_context
 
- url = 'https://docs.python.org/ja/3/contents.html'
+ url = 'https://takuron1996.github.io/Sphinx/index.html'
  file = 'result.html'
 
  with urlopen(url) as request:
@@ -48,3 +48,22 @@ Webページのハイパーリンクを辿って次々にWebページをダウ�
 * 9行目：HTTPヘッダーからエンコーディングを取得する。（取得できなかった場合はutf-8を設定）
 * 10行目：指定したファイル名でファイルの書き込み準備を実施する
 * 11行目：応答データをエンコーディングでデコードしてファイルに書き込む
+
+--------------------
+実行方法
+--------------------
+
+.. code-block:: sh
+
+ $ python3 example.py
+
+実行すると、result.htmlというファイルがexample1ディレクトリの下に作成されます。
+これを開くと取得したHTMLのデータを確認することができます。
+
+.. code-block:: sh
+
+ $ pwd
+ /Users/taku/Desktop/web/example1
+ $ ls
+ example.py result.html
+ $ open result.html
