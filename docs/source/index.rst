@@ -1,19 +1,18 @@
-.. practice documentation master file, created by
-   sphinx-quickstart on Thu Nov 19 12:05:48 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Pythonを用いたwebスクレイピング入門
+=====================================
 
-Welcome to practice's documentation!
-====================================
+目次
+==========
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
+   /article/introduction
+   /article/prepare
+   /article/example
 
-
-Indices and tables
-==================
+インデックス、テーブル
+======================
 
 * :ref:`genindex`
 * :ref:`modindex`
